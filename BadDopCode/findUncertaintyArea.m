@@ -1,5 +1,4 @@
-% Find Uncertainty Area Function
-function [uncertainty, condNum] = findUncertaintyArea(sensor1, sensor2, sensor3, th)
+function [uncertainty, eigenVect, eigenVal, condNum] = findUncertaintyArea(sensor1, sensor2, sensor3, th)
     % sensor1, sensor2, sensor3: 구조체, 각각 points (Point Cloud), P (위치), D (방향) 등 포함
     % th: 거리 임계값 (겹치는 영역 기준)
     % uncertainty: 세 UUV의 겹치는 영역 (공통 포인트)
