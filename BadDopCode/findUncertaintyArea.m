@@ -9,7 +9,7 @@ function [uncertainty, condNum] = findUncertaintyArea(sensor1, sensor2, sensor3,
     th = mean([norm(sensor1.points(checkpoint_a)-sensor1.points(checkpoint_b))...
             ,norm(sensor2.points(checkpoint_a)-sensor2.points(checkpoint_b)) ...
             ,norm(sensor3.points(checkpoint_a)-sensor3.points(checkpoint_b))])*10;
-    disp(th)
+    %disp(th)
     % Step 1: Sensor 1과 Sensor 2 간의 겹치는 영역 계산
     distances12 = pdist2(sensor1.points, sensor2.points);
     [UUV1_matchIdx_12, ~] = find(distances12 < th);
