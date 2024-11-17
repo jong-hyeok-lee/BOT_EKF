@@ -1,0 +1,24 @@
+DOP 안좋은 시뮬레이션 상황가정
+
+**badTraj.mlx**
+dop가 안좋은 시뮬레이션 궤적을 생성
+DOPgoodtrajectories를 저장하면 됨
+
+**ConditionNumber.mlx**
+ConditionNumber를 구하는 라이브 스크립트
+CDN행렬을 얻어야 하지만 NAN이 나와 수정중
+updateSensor.m findUncertainArea.m은 condition number구하는데 필요한 함수
+
+**BOTEKF.mlx**
+3개의 소나로 하나의 타겟을 추적하는 EKF 코드
+sigma에 condition number를 적용해서 해야하지만 condition number가 안나오는 관계로 안되고 있음
+
+**BadTrajec.mat**
+1000초동안의 궤적
+
+**m_10.mat**
+10초동안의 궤적
+
+실행순서
+ConditionNumber.mlx -> BOTEKF.mlx를 하면 된다
+
