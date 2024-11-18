@@ -2,7 +2,7 @@ function sonar = updateSensor(maxDistance, noise, position, heading)
     sonar.maxD = maxDistance; % 최대 측정 거리
     sonar.noise = deg2rad(noise); % 각 센서의 measurement Noise (angle)
     sonar.maxR = tan(sonar.noise) * sonar.maxD; % noise 기반 원뿔 반지름 생성
-    sonar.numPoints = 500; % 포인트 수
+    sonar.numPoints = 1000; % 포인트 수
 
     sonar.P = position'; % 센서 위치
     sonar.D = [cos(heading(2)) * cos(heading(1)), ...
